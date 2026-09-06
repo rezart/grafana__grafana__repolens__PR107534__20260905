@@ -58,7 +58,7 @@ jobs:
           find ./artifact -mindepth 2 -maxdepth 2 -exec cp -r {} out/ \;
           ls -al out
       - name: Upload artifacts
-        uses: grafana/shared-workflows/actions/push-to-gcs@push-to-gcs-v0.2.0
+        uses: grafana/shared-workflows/actions/push-to-gcs@get-vault-secrets-v1.2
         with:
           bucket: ${{ inputs.bucket }}
           environment: ${{ inputs.environment }}
